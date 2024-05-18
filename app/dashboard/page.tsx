@@ -5,10 +5,7 @@ import { PositionCoordinate } from '../globalTypes'
 import MapWrapper from '../component/MapWrapper'
 
 const Dashboard = () => {
-    const [positionCoords, setPositionCoords] = useState<PositionCoordinate>({
-        latitude: 0,
-        longitude: 0,
-    })
+    const [positionCoords, setPositionCoords] = useState<PositionCoordinate>()
 
     const locationErrorHandling = (browserGeolocationAPI: boolean) => {
         console.log(
@@ -33,9 +30,8 @@ const Dashboard = () => {
     }, [])
 
     return (
-        <div>
-            {positionCoords?.latitude}, {positionCoords?.longitude}
-            <MapWrapper coor={positionCoords} style={{}} />
+        <div className="flex h-full w-full flex-col items-center justify-center">
+            {positionCoords && <MapWrapper coor={positionCoords} style={{}} />}
         </div>
     )
 }
