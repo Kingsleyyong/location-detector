@@ -1,4 +1,4 @@
-import { CSSProperties, useEffect, useMemo } from 'react'
+import { CSSProperties, useMemo } from 'react'
 import { PositionCoordinate } from '../globalTypes'
 import {
     APIProvider,

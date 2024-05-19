@@ -1,3 +1,5 @@
+'use client'
+
 import { useEffect, useState } from 'react'
 import MapWrapper from '../component/MapWrapper'
 import { PositionCoordinate } from '../globalTypes'
