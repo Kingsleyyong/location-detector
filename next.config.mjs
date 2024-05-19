@@ -9,6 +9,7 @@ const nextConfig = {
     },
     env: {
         GOOGLE_API_KEY: 'AIzaSyAQYN3xWOmqJiy14qqhipBSRAVFZa9cLeo',
+        GOOGLE_MAP_ID: '425e131ad54e9ed2',
         NEXTAUTH_URL: 'http://localhost:3000',
         GOOGLE_CLIENT_ID:
             '735033680290-p9iidt281t3rnd2otl0sd87ouud4155h.apps.googleusercontent.com',

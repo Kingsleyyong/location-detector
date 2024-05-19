@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation'
 
 const Dashboard = () => {
     const { data: session } = useSession({
-        required: true,
+        required: false,
         onUnauthenticated() {
             redirect('api/auth/signin?callbackUrl=/')
         },
@@ -15,11 +15,14 @@ const Dashboard = () => {
     const [positionCoords, setPositionCoords] = useState<PositionCoordinate>()
 
     const locationErrorHandling = (browserGeolocationAPI: boolean) => {
-        console.log(
-            browserGeolocationAPI
+        console.log('trigger')
+        setPositionCoords({
+            latitude: 0,
+            longitude: 0,
+            errorMessage: browserGeolocationAPI
                 ? 'Error: The Geolocation service failed.'
-                : "Error: Your browser doesn't support geolocation."
-        )
+                : "Error: Your browser doesn't support geolocation.",
+        })
     }
 
     useEffect(() => {
@@ -51,9 +54,19 @@ const Dashboard = () => {
                 </button>
             </div>
 
-            {positionCoords && (
-                <MapWrapper coor={positionCoords} className="grow" />
-            )}
+            <MapWrapper
+                coor={positionCoords}
+                className="grow"
+                handleCloseInfoWindow={() =>
+                    setPositionCoords(
+                        (prev) =>
+                            prev && {
+                                ...prev,
+                                errorMessage: undefined,
+                            }
+                    )
+                }
+            />
         </div>
     )
 }
