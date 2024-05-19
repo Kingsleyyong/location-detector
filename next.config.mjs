@@ -9,6 +9,13 @@ const nextConfig = {
     },
     env: {
         GOOGLE_API_KEY: 'AIzaSyAQYN3xWOmqJiy14qqhipBSRAVFZa9cLeo',
+        NEXTAUTH_URL: 'http://localhost:3000',
+        GOOGLE_CLIENT_ID:
+            '735033680290-p9iidt281t3rnd2otl0sd87ouud4155h.apps.googleusercontent.com',
+        GOOGLE_CLIENT_SECRET: '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',
+        FACEBOOK_CLIENT_ID: '464343849458242',
+        FACEBOOOK_CLIENT_SECRET: '0acf2b470dcf4415f6f2a308e8559ac8',
+        JWT_SECRET: 'zXQjKliaeLXIMX0vsi0nr1txl/Q+d7YE+xSVmbwW1UU=',
     },
 }
 
