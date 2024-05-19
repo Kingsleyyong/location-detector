@@ -42,13 +42,13 @@ const Dashboard = () => {
 
     return (
         <div className="flex h-full w-full flex-col items-center">
-            <div className="roun flex h-20 w-full grow-0 items-center justify-between rounded-b-lg  bg-gray-500/60 p-3">
-                <span className="h-min text-2xl">
+            <div className="flex h-20 w-full grow-0 items-center justify-between rounded-b-lg  bg-gray-500/60 p-3">
+                <span className="h-min text-xs sm:text-sm md:text-2xl lg:text-3xl">
                     Welcome! {session?.user?.name}
                 </span>
 
                 <button
-                    className="rounded-lg px-6 py-3 hover:bg-gray-600"
+                    className="rounded-lg bg-gray-800 px-2 py-3 text-xs hover:bg-gray-600 sm:px-5 sm:text-lg md:px-5 md:text-lg lg:px-4 "
                     onClick={() => (session ? signOut() : signIn())}
                 >
                     {session ? 'Sign Out' : 'Sign In'}
