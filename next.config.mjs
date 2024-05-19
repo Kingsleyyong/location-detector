@@ -16,7 +16,7 @@ const nextConfig = {
         GOOGLE_CLIENT_SECRET: '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',
         FACEBOOK_CLIENT_ID: '464343849458242',
         FACEBOOOK_CLIENT_SECRET: '0acf2b470dcf4415f6f2a308e8559ac8',
-        JWT_SECRET: 'zXQjKliaeLXIMX0vsi0nr1txl/Q+d7YE+xSVmbwW1UU=',
+        SECRET: 'zXQjKliaeLXIMX0vsi0nr1txl/Q+d7YE+xSVmbwW1UU=',
     },
 }
 
