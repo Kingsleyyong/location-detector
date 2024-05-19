@@ -8,7 +8,7 @@ import { redirect } from 'next/navigation'
 
 const Dashboard = () => {
     const { data: session } = useSession({
-        required: false,
+        required: true,
         onUnauthenticated() {
             redirect('api/auth/signin?callbackUrl=/')
         },
