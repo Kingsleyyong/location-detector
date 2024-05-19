@@ -17,7 +17,6 @@ const Dashboard = () => {
     const [positionCoords, setPositionCoords] = useState<PositionCoordinate>()
 
     const locationErrorHandling = (browserGeolocationAPI: boolean) => {
-        console.log('trigger')
         setPositionCoords({
             latitude: 0,
             longitude: 0,

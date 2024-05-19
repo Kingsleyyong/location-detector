@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     keywords: ['nextjs', 'nextjs13', 'next13', 'pwa', 'next-pwa'],
     themeColor: [{ media: '(prefers-color-scheme: dark)', color: '#fff' }],
     authors: [{ name: 'Kingsley Yong' }],
+    appleWebApp: {
+        title: 'Location Detection App',
+    },
     viewport:
         'minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover',
     icons: [
